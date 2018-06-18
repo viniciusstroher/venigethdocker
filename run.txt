@@ -4,6 +4,6 @@ docker run -it -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu bash (us
 
 docker run -it -p 30303:30303 -p 8545:8545 -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu bootnode -genkey=/root/bootkey.key
 
-docker run -it -p 30303:30303 -p 8545:8545 -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu geth --datadir /root/blockchain init /root/genesis.json 
+docker run -it -p 30303:30303 -p 8545:8545 -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu geth init /root/genesis.json 
 
 #docker run -d --name container_geth veni:gethubuntu
