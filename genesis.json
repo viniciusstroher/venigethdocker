@@ -7,7 +7,9 @@
 	},
 	"difficulty": "0x4000",
 	"gasLimit": "2100000",
-	"alloc": {}
+	"alloc": {
+		
+	}
 }
 
 
