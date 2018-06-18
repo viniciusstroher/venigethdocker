@@ -10,6 +10,6 @@ RUN \
   apt-get -y update && \
   apt-get install -y ethereum
 
-RUN mkdir /root/blockchain
+RUN mkdir /root/blockchain && mkdir /root/ipc
 ADD genesis.json /root
 WORKDIR "/root"
