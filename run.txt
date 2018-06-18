@@ -3,4 +3,12 @@ docker run -it veni:gethubuntu bash (usar comandos geth e bootnode aqui)
 
 docker run -it -p 30303:30303 -p 8545:8545 -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu bootnode -genkey=/root/bootkey.key
 
+
+docker run -it -p 30303:30303 -p 8545:8545 -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu bootnode -genkey=/root/bootkey.key
+
+docker run -it -p 30303:30303 -p 8545:8545 -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu geth init /root/genesis.json
+
+geth  --cache 512 --port 30304 -ipcpath "/Users/<user>/Library/Ethereum/geth.ipc" --networkid 2133 --datadir "/Users/<user>/Ethereum/datadir/redeprivada" --rpc --rpccorsdomain="*" --rpcaddr "0.0.0.0" console
+
+
 #docker run -d --name container_geth veni:gethubuntu
