@@ -2,8 +2,8 @@ docker build -t veni:gethubuntu . -f Dockerfile
 
 docker run -it -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu bash (usar comandos geth e bootnode aqui)
 
-docker run -it -p 30303:30303 -p 8545:8545 -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu bootnode -genkey=/root/bootkey.key
+docker run -it -p 30303:30303 -p 8545:8545 veni:gethubuntu geth init genesis.json 
 
-docker run -it -p 30303:30303 -p 8545:8545 -v /c/Users/Usuario/Desktop/ubuntu:/root veni:gethubuntu geth init /root/genesis.json 
+docker run -it -p 30303:30303 -p 8545:8545 bootnode -genkey=bootkey.key
 
 #docker run -d --name container_geth veni:gethubuntu
