@@ -6,12 +6,19 @@ docker run -it -p 30303:30303 -p 8545:8545 veni:gethubuntu geth init genesis.jso
 
 docker run -it -p 30303:30303 -p 8545:8545 veni:gethubuntu bootnode -genkey=bootkey.key
 
-docker run -it -p 30303:30303 -p 8545:8545 -v /c/users/veni/venigethdocker/ipc:/root/ipc veni:gethubuntu geth --fast --cache 512 --networkid "987654321" --ipcpath "/root/ipc" --rpc --rpccorsdomain="*" --rpcaddr "0.0.0.0" --rpcapi "db,eth,net,web3,personal" --port 30303 console
+docker run -d -p 30303:30303 -p 8545:8545 veni:gethubuntu geth --fast --cache 512 --networkid "987654321" --rpc --rpccorsdomain="*" --rpcaddr "0.0.0.0" --rpcapi "db,eth,net,web3,personal" --port 30303 console
+
+
+docker run -it veni:gethubuntu geth attach
+
+
+docker run -it veni:gethubuntu geth console
 
 
 #docker run -d --name container_geth veni:gethubuntu
-
+#-v /c/users/veni/desktop/venigethdocker/ipc:/root/.ethereum 
 
 #"0x811747f8917727070514AC91C2490e56c232F847" : "10000000000"
 #VERIFICAR SE tiver ip no docker-machine ls usar este ip na metamask (carteira app)
 docker run -d -p 30303:30303 -p 8545:8545 veni:gethubuntu geth --fast --cache 512 --networkid "987654321" --rpc --rpccorsdomain="*" --rpcaddr "0.0.0.0" --rpcapi "db,eth,net,web3,personal" --port 30303 console
+--ipcpath "/root/ipc/geth.ipc"
