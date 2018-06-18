@@ -22,3 +22,13 @@ docker run -it veni:gethubuntu geth console
 #VERIFICAR SE tiver ip no docker-machine ls usar este ip na metamask (carteira app)
 docker run -d -p 30303:30303 -p 8545:8545 veni:gethubuntu geth --fast --cache 512 --networkid "987654321" --rpc --rpccorsdomain="*" --rpcaddr "0.0.0.0" --rpcapi "db,eth,net,web3,personal" --port 30303 console
 --ipcpath "/root/ipc/geth.ipc"
+
+
+
+
+
+
+#ESTRATEGIA
+docker run -d -p 30303:30303 -p 8545:8545 veni:gethubuntu geth --fast --cache 512 --networkid "987654321" --rpc --rpccorsdomain="*" --rpcaddr "0.0.0.0" --rpcapi "db,eth,net,web3,personal" --port 30303
+docker ps
+docker exec -it <container id> geth attach
