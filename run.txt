@@ -13,5 +13,5 @@ docker run -it -p 30303:30303 -p 8545:8545 veni:gethubuntu geth --fast --cache 5
 
 
 #"0x811747f8917727070514AC91C2490e56c232F847" : "10000000000"
-
+#VERIFICAR SE tiver ip no docker-machine ls usar este ip na metamask (carteira app)
 docker run -d -p 30303:30303 -p 8545:8545 veni:gethubuntu geth --fast --cache 512 --networkid "987654321" --rpc --rpccorsdomain="*" --rpcaddr "0.0.0.0" --rpcapi "db,eth,net,web3,personal" --port 30303 console
